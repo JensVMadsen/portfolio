@@ -28,10 +28,10 @@
 
   
       ,"page1": {
-          "title": "About Me",
-          "content": "This website is powered by fastpages 1. . a blogging platform that natively supports Jupyter notebooks in addition to other formats. &#8617; . |",
-          "url": "https://jensvmadsen.github.io/portfolio/about/",
-          "relUrl": "/about/",
+          "title": "About",
+          "content": "My name is Jens and I&#8217;m a PhD student at Technical University of Denmark. .",
+          "url": "https://jensvmadsen.github.io/portfolio/_pages/about.html",
+          "relUrl": "/_pages/about.html",
           "date": ""
       }
       
@@ -43,23 +43,30 @@
   
 
   
-
-  
-  
-
-  
-
-  
-  
-
-  
+      ,"page4": {
+          "title": "Projects",
+          "content": "",
+          "url": "https://jensvmadsen.github.io/portfolio/search/",
+          "relUrl": "/search/",
+          "date": ""
+      }
+      
   
 
   
   
 
   
-      ,"page10": {
+  
+
+  
+  
+
+  
+  
+
+  
+      ,"page9": {
           "title": "",
           "content": "Sitemap: {{ “sitemap.xml” | absolute_url }} | .",
           "url": "https://jensvmadsen.github.io/portfolio/robots.txt",
