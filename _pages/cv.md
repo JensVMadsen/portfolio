@@ -4,7 +4,7 @@ permalink: /cv/
 title: CV
 ---
 <!-- The (first) h1 will be used as the <title> of the HTML page -->
-# Jens Visbech Madsen
+## Jens Visbech Madsen
 
 <!-- The unordered list immediately after the h1 will be formatted on a single
 line. It is intended to be used for contact details -->
@@ -17,21 +17,21 @@ is intended to be used for a short summary. -->
 PhD student at the Technical University of Denmark focusing on AI-approaches in
 the context of leading edge erosion.
 
-## Education
+### Education
 
-#### <span>Technical University of Denmark, MSc Wind Energy</span> <span>2018 - 2021</span>
+##### <span>Technical University of Denmark, MSc Wind Energy</span> <span>2018 - 2021</span>
  - AI
  - Aeroelastic simulations
 
-#### <span>Technical University of Denmark, BSc Earth and Space Phyics and Engineering</span> <span>2015 - 2018</span>
+##### <span>Technical University of Denmark, BSc Earth and Space Phyics and Engineering</span> <span>2015 - 2018</span>
   - Weather and climate systems
   - Electrical systems
 
-## Proffesional experience
+### Proffesional experience
 
 <!-- You have to wrap the "left" and "right" half of these headings in spans by
 hand -->
-#### <span>PhD student, DTU Wind Energy</span> <span>OCT2021 -</span>
-#### <span>Research assistant, DTU Wind Energy</span> <span>MAR2021 - OCT2021</span>
-#### <span>Student assistant, Ørsted</span> <span>JUL2018 - DEC2020</span>
-#### <span>Calibration assistant, Svend Ole Hansen A</span> <span>FEB2018 - DEC2020</span>
+##### <span>PhD student, DTU Wind Energy</span> <span>OCT2021 -</span>
+##### <span>Research assistant, DTU Wind Energy</span> <span>MAR2021 - OCT2021</span>
+##### <span>Student assistant, Ørsted</span> <span>JUL2018 - DEC2020</span>
+##### <span>Calibration assistant, Svend Ole Hansen A</span> <span>FEB2018 - DEC2020</span>
