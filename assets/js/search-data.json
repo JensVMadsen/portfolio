@@ -38,6 +38,17 @@
   
 
   
+      ,"page2": {
+          "title": "CV",
+          "content": ". professional experience . MAR2021 – now DTU Wind Energy . Research assistant . Xx | Xx | Xx | . JUL2019 – DEC2020 Ørsted . SCADA, student assistant . Technical analysis and documentation of down-time for offshore wind farms | Implementation of digital inspection tools for control and communication systems | Handling and reviewing project documentation and deliverables | . Reference: Thomas Tjelum (THOTJ@orsted.dk) . FEB2019 – DEC2020 Svend Ole Hansen . Calibration assistant, part-time . Configuration and calibration of cup anemometers | Data analysis and validation of calibration signals | . AUG2017 Green Transition Denmark . Measurement assistant, freelance . Measuring air pollution from cruise ships at Nordhavn and Langelinie | Data analysis and visualization of data | . Jens Visbech Madsen .",
+          "url": "https://jensvmadsen.github.io/portfolio/cv/",
+          "relUrl": "/cv/",
+          "date": ""
+      }
+      
+  
+
+  
 
   
   
@@ -55,7 +66,7 @@
   
 
   
-      ,"page8": {
+      ,"page9": {
           "title": "",
           "content": "Sitemap: {{ “sitemap.xml” | absolute_url }} | .",
           "url": "https://jensvmadsen.github.io/portfolio/robots.txt",
