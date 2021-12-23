@@ -3,6 +3,9 @@ layout: page
 permalink: /cv/
 title: CV
 ---
+![image](/images/selfie.jpg){: style="float: left"}
+
+Some text.
 <!-- The (first) h1 will be used as the <title> of the HTML page -->
 # Jens Visbech Madsen
 
