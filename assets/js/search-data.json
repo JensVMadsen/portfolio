@@ -28,10 +28,10 @@
 
   
       ,"page1": {
-          "title": "About",
-          "content": "My name is Jens and I&#8217;m a PhD student at Technical University of Denmark. .",
-          "url": "https://jensvmadsen.github.io/portfolio/_pages/about.html",
-          "relUrl": "/_pages/about.html",
+          "title": "About me",
+          "content": "Graduate wind engineer with a personal passion for machine learning and data driven analysis. Wide variety of skills within the field of wind energy including site assessment according to IEC standards , wind turbine sizing , grid connection and wind farm economics . Professional experience working with machine learning approaches for predicting leading erosion at DTU Wind Energy. . .",
+          "url": "https://jensvmadsen.github.io/portfolio/about/",
+          "relUrl": "/about/",
           "date": ""
       }
       
@@ -43,14 +43,6 @@
   
 
   
-      ,"page4": {
-          "title": "Projects",
-          "content": "",
-          "url": "https://jensvmadsen.github.io/portfolio/search/",
-          "relUrl": "/search/",
-          "date": ""
-      }
-      
   
 
   
@@ -63,10 +55,7 @@
   
 
   
-  
-
-  
-      ,"page9": {
+      ,"page8": {
           "title": "",
           "content": "Sitemap: {{ “sitemap.xml” | absolute_url }} | .",
           "url": "https://jensvmadsen.github.io/portfolio/robots.txt",
