@@ -10,4 +10,4 @@ turbine sizing , grid connection and wind farm economics .
 Professional experience working with machine learning approaches
 for predicting leading erosion at DTU Wind Energy.
 
-![Tux, the Linux mascot](/images/selfie.jpg)
+![Tux, the Linux mascot](images/selfie.jpg)
