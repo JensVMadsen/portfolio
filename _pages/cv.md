@@ -41,6 +41,7 @@ hand -->
 #### Papers:
 
 #### Presentations:
->> Madse, J.V. and .. 2021. [](/pdfs\WESC2021-LICOREIM-26052021_v01.pdf). Wind Energy Science COnference, 26 May, Online.  
->> EERA JP Wind SP4 Workshop on Blade Erosion.  
->> Bla
+  - Madsen, J.V. and .. 2021. [Power and Load Prediction using Lidar Measurements and Deep
+Learning](/pdfs/WESC2021-LICOREIM-26052021_v01.pdf). Wind Energy Science Conference (WESC), 26 May, Online.  
+  - EERA JP Wind SP4 Workshop on Blade Erosion.  
+  - Bla
