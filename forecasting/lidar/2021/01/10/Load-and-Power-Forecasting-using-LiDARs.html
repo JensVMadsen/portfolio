@@ -4,21 +4,23 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.7.1 -->
-<title>Title | Jens Visbech Madsen</title>
+<title>Load and power forecasting using LiDARs and machine learning | Jens Visbech Madsen</title>
 <meta name="generator" content="Jekyll v4.1.1" />
-<meta property="og:title" content="Title" />
+<meta property="og:title" content="Load and power forecasting using LiDARs and machine learning" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Scientific portfolio" />
-<meta property="og:description" content="Scientific portfolio" />
-<link rel="canonical" href="https://jensvmadsen.github.io/portfolio/2021/01/10/Load-and-Power-Forecasting-using-LiDARs.html" />
-<meta property="og:url" content="https://jensvmadsen.github.io/portfolio/2021/01/10/Load-and-Power-Forecasting-using-LiDARs.html" />
+<meta name="description" content="This notebook gives an introduction to time series forecasting using recurrent neural networks (RNN)" />
+<meta property="og:description" content="This notebook gives an introduction to time series forecasting using recurrent neural networks (RNN)" />
+<link rel="canonical" href="https://jensvmadsen.github.io/portfolio/forecasting/lidar/2021/01/10/Load-and-Power-Forecasting-using-LiDARs.html" />
+<meta property="og:url" content="https://jensvmadsen.github.io/portfolio/forecasting/lidar/2021/01/10/Load-and-Power-Forecasting-using-LiDARs.html" />
 <meta property="og:site_name" content="Jens Visbech Madsen" />
+<meta property="og:image" content="https://jensvmadsen.github.io/portfolio/images/notebook_images/time-series-forecasting.png" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2021-01-10T00:00:00-06:00" />
-<meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Title" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://jensvmadsen.github.io/portfolio/images/notebook_images/time-series-forecasting.png" />
+<meta property="twitter:title" content="Load and power forecasting using LiDARs and machine learning" />
 <script type="application/ld+json">
-{"url":"https://jensvmadsen.github.io/portfolio/2021/01/10/Load-and-Power-Forecasting-using-LiDARs.html","@type":"BlogPosting","headline":"Title","dateModified":"2021-01-10T00:00:00-06:00","datePublished":"2021-01-10T00:00:00-06:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://jensvmadsen.github.io/portfolio/2021/01/10/Load-and-Power-Forecasting-using-LiDARs.html"},"description":"Scientific portfolio","@context":"https://schema.org"}</script>
+{"url":"https://jensvmadsen.github.io/portfolio/forecasting/lidar/2021/01/10/Load-and-Power-Forecasting-using-LiDARs.html","@type":"BlogPosting","headline":"Load and power forecasting using LiDARs and machine learning","dateModified":"2021-01-10T00:00:00-06:00","datePublished":"2021-01-10T00:00:00-06:00","image":"https://jensvmadsen.github.io/portfolio/images/notebook_images/time-series-forecasting.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://jensvmadsen.github.io/portfolio/forecasting/lidar/2021/01/10/Load-and-Power-Forecasting-using-LiDARs.html"},"description":"This notebook gives an introduction to time series forecasting using recurrent neural networks (RNN)","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/portfolio/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://jensvmadsen.github.io/portfolio/feed.xml" title="Jens Visbech Madsen" /><link rel="shortcut icon" type="image/x-icon" href="/portfolio/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
@@ -89,7 +91,7 @@ window.onload = wrap_img;
         <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">Title</h1><p class="post-meta post-meta-title"><time class="dt-published" datetime="2021-01-10T00:00:00-06:00" itemprop="datePublished">
+    <h1 class="post-title p-name" itemprop="name headline">Load and power forecasting using LiDARs and machine learning</h1><p class="page-description">This notebook gives an introduction to time series forecasting using recurrent neural networks (RNN)</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2021-01-10T00:00:00-06:00" itemprop="datePublished">
         Jan 10, 2021
       </time>
        • <span class="read-time" title="Estimated read time">
@@ -131,34 +133,11 @@ window.onload = wrap_img;
 
 <div class="container" id="notebook-container">
         
-    
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-python"><pre><span></span><span class="o">&gt;</span> <span class="n">This</span> <span class="n">notebook</span> <span class="n">gives</span> <span class="n">an</span> <span class="n">introduction</span> <span class="n">to</span> <span class="n">time</span> <span class="n">series</span> <span class="n">forecasting</span> <span class="n">using</span> <span class="n">recurrent</span> <span class="n">neural</span> <span class="n">networks</span> <span class="p">(</span><span class="n">RNN</span><span class="p">)</span>
-
-<span class="o">-</span> <span class="n">toc</span><span class="p">:</span> <span class="n">false</span> 
-<span class="o">-</span> <span class="n">badges</span><span class="p">:</span> <span class="n">true</span>
-<span class="o">-</span> <span class="n">comments</span><span class="p">:</span> <span class="n">false</span>
-<span class="o">-</span> <span class="n">categories</span><span class="p">:</span> <span class="p">[</span><span class="n">jupyter</span><span class="p">]</span>
-<span class="o">-</span> <span class="n">image</span><span class="p">:</span> <span class="n">images</span><span class="o">/</span><span class="n">time</span><span class="o">-</span><span class="n">series</span><span class="o">-</span><span class="n">forecasting</span><span class="o">.</span><span class="n">png</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-    
-
 </div>
 
 
 
-  </div><a class="u-url" href="/portfolio/2021/01/10/Load-and-Power-Forecasting-using-LiDARs.html" hidden></a>
+  </div><a class="u-url" href="/portfolio/forecasting/lidar/2021/01/10/Load-and-Power-Forecasting-using-LiDARs.html" hidden></a>
 </article>
 
       </div>
