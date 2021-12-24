@@ -73,6 +73,14 @@
   
 
   
+      ,"page4": {
+          "title": "Projects",
+          "content": "",
+          "url": "https://jensvmadsen.github.io/portfolio/projects/",
+          "relUrl": "/projects/",
+          "date": ""
+      }
+      
   
 
   
@@ -88,7 +96,10 @@
   
 
   
-      ,"page9": {
+  
+
+  
+      ,"page10": {
           "title": "",
           "content": "Sitemap: {{ “sitemap.xml” | absolute_url }} | .",
           "url": "https://jensvmadsen.github.io/portfolio/robots.txt",
