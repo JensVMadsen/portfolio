@@ -44,11 +44,6 @@ minima:
     facebook: jens.v.madsen
     github: JensVMadsen
 
-# definition of pages and order to be shown in the navbar
-header_pages:
-  - about.md
-  - projects.md
-  - cv.md
 
 # Set this to true to get LaTeX math equation support
 use_math: true
