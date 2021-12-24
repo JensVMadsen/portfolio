@@ -35,3 +35,12 @@ hand -->
 ##### <span>Research assistant, DTU Wind Energy</span> <span>MAR2021 - OCT2021</span>
 ##### <span>Student assistant, Ørsted</span> <span>JUL2018 - DEC2020</span>
 ##### <span>Calibration assistant, Svend Ole Hansen A</span> <span>FEB2018 - DEC2020</span>
+
+### Dissemination
+
+#### Papers:
+
+#### Presentations:
+>> Madse, J.V. and .. 2021. [](/pdfs\WESC2021-LICOREIM-26052021_v01.pdf). Wind Energy Science COnference, 26 May, Online.  
+>> EERA JP Wind SP4 Workshop on Blade Erosion.  
+>> Bla
