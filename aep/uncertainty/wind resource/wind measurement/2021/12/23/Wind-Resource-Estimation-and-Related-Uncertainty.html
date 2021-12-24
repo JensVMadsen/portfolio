@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>Wind Resource Estimation and Related Uncertainty | Jens Visbech Madsen</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="Wind Resource Estimation and Related Uncertainty" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="An introduction to wind resource estimation using wind measurements and typical uncertainty quantification using IEC 61400-12." />
+<meta property="og:description" content="An introduction to wind resource estimation using wind measurements and typical uncertainty quantification using IEC 61400-12." />
+<link rel="canonical" href="https://jensvmadsen.github.io/portfolio/aep/uncertainty/wind%20resource/wind%20measurement/2021/12/23/Wind-Resource-Estimation-and-Related-Uncertainty.html" />
+<meta property="og:url" content="https://jensvmadsen.github.io/portfolio/aep/uncertainty/wind%20resource/wind%20measurement/2021/12/23/Wind-Resource-Estimation-and-Related-Uncertainty.html" />
+<meta property="og:site_name" content="Jens Visbech Madsen" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-12-23T00:00:00-06:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Wind Resource Estimation and Related Uncertainty" />
+<script type="application/ld+json">
+{"url":"https://jensvmadsen.github.io/portfolio/aep/uncertainty/wind%20resource/wind%20measurement/2021/12/23/Wind-Resource-Estimation-and-Related-Uncertainty.html","@type":"BlogPosting","headline":"Wind Resource Estimation and Related Uncertainty","dateModified":"2021-12-23T00:00:00-06:00","datePublished":"2021-12-23T00:00:00-06:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://jensvmadsen.github.io/portfolio/aep/uncertainty/wind%20resource/wind%20measurement/2021/12/23/Wind-Resource-Estimation-and-Related-Uncertainty.html"},"description":"An introduction to wind resource estimation using wind measurements and typical uncertainty quantification using IEC 61400-12.","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/portfolio/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://jensvmadsen.github.io/portfolio/feed.xml" title="Jens Visbech Madsen" /><link rel="shortcut icon" type="image/x-icon" href="/portfolio/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.12.0/katex.min.css" integrity="sha512-h7nl+xz8wgDlNM4NqKEM4F1NkIRS17M9+uJwIGwuo8vGqIl4BhuCKdxjWEINm+xyrUjNCnK5dCrhM0sj+wTIXw==" crossorigin="anonymous" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.12.0/katex.min.js" integrity="sha512-/CMIhXiDA3m2c9kzRyd97MTb3MC6OVnx4TElQ7fkkoRghwDf6gi41gaT1PwF270W6+J60uTmwgeRpNpJdRV6sg==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.12.0/contrib/auto-render.min.js" integrity="sha512-Do7uJAaHZm5OLrIv/yN4w0iG1dbu01kzdMNnFfu/mAqgUk6Nniv2JYHcwH+cNwjqgLcqcuBBk+JRvprLVI8azg==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha512-0doc9hKxR3PYwso42RD1p5ySZpzzuDiOwMrdCEh2WdJZCjcmFKc/wEnL+z8fBQrnHoiNWbo+3fiGkOYXBdQp4A==" crossorigin="anonymous"></script>
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement( document.body, {
+        delimiters: [
+            {left: "$$", right: "$$", display: true},
+            {left: "[%", right: "%]", display: true},
+            {left: "$", right: "$", display: false}
+        ]}
+        );
+    });
+    </script>
+
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/portfolio/">Jens Visbech Madsen</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/portfolio/about/">About me</a><a class="page-link" href="/portfolio/cv/">CV</a><a class="page-link" href="/portfolio/projects/">Projects</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Wind Resource Estimation and Related Uncertainty</h1><p class="page-description">An introduction to wind resource estimation using wind measurements and typical uncertainty quantification using IEC 61400-12.</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2021-12-23T00:00:00-06:00" itemprop="datePublished">
+        Dec 23, 2021
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      1 min read
+    
+</span></p>
+
+    
+
+    
+      
+        <div class="pb-5 d-flex flex-justify-center">
+          <div class="px-2">
+
+    <a href="https://github.com/JensVMadsen/portfolio/tree/master/_notebooks/2021-12-23-Wind-Resource-Estimation-and-Related-Uncertainty.ipynb" role="button" target="_blank">
+<img class="notebook-badge-image" src="/portfolio/assets/badges/github.svg" alt="View On GitHub">
+    </a>
+</div>
+
+          
+          <div class="px-2">
+    <a href="https://colab.research.google.com/github/JensVMadsen/portfolio/blob/master/_notebooks/2021-12-23-Wind-Resource-Estimation-and-Related-Uncertainty.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/portfolio/assets/badges/colab.svg" alt="Open In Colab"/>
+    </a>
+</div>
+          
+        </div>
+      </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <!--
+#################################################
+### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
+#################################################
+# file to edit: _notebooks/2021-12-23-Wind-Resource-Estimation-and-Related-Uncertainty.ipynb
+-->
+
+<div class="container" id="notebook-container">
+        
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Introduction">Introduction<a class="anchor-link" href="#Introduction"> </a></h2><p>Here goes the introduction..</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_png output_subarea ">
+<img src="data:image/png;base64,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
+" />
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+</div>
+
+
+
+  </div><a class="u-url" href="/portfolio/aep/uncertainty/wind%20resource/wind%20measurement/2021/12/23/Wind-Resource-Estimation-and-Related-Uncertainty.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/portfolio/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="/portfolio/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/portfolio/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>Scientific portfolio</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"><li><a rel="me" href="https://www.facebook.com/jens.v.madsen" title="jens.v.madsen"><svg class="svg-icon grey"><use xlink:href="/portfolio/assets/minima-social-icons.svg#facebook"></use></svg></a></li><li><a rel="me" href="https://github.com/JensVMadsen" title="JensVMadsen"><svg class="svg-icon grey"><use xlink:href="/portfolio/assets/minima-social-icons.svg#github"></use></svg></a></li><li><a rel="me" href="https://www.linkedin.com/in/jensvm" title="jensvm"><svg class="svg-icon grey"><use xlink:href="/portfolio/assets/minima-social-icons.svg#linkedin"></use></svg></a></li><li><a rel="me" href="https://twitter.com/jvimadk" title="jvimadk"><svg class="svg-icon grey"><use xlink:href="/portfolio/assets/minima-social-icons.svg#twitter"></use></svg></a></li></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
