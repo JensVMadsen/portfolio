@@ -33,9 +33,10 @@ hand -->
 ### Dissemination:
 
 #### Papers:
+- [Visbech, Jens, et al. "Introducing a data-driven approach to predict site-specific leading edge erosion." Wind Energy Science Discussions (2022): 1-30.](https://wes.copernicus.org/preprints/wes-2022-55/wes-2022-55.pdf)
 
 #### Presentations:
-  - [Power and Load Prediction using Lidar Measurements and Deep
+- [Power and Load Prediction using Lidar Measurements and Deep
 Learning](/portfolio/pdfs/WESC2021-LICOREIM-26052021_v01.pdf). Wind Energy Science Conference (WESC), 26-05-2021, Online.
-  - [Leading Edge Erosion Defect Forecasting and its Coupling to Wind 
+- [Leading Edge Erosion Defect Forecasting and its Coupling to Wind 
 Farm Control](/portfolio/pdfs/EERA_JP_Wind_SP4_Workshop_on_LEE-14122021_v01.pdf). EERA JP Wind SP4 Workshop on Blade Erosion, 14-12-2021, Online.
